@@ -69,7 +69,9 @@ apiRoutes.post('/authenticate', function(req, res) {
 			if (user.password != req.body.password) {
 				res.json({success: false, message: 'Authentication failed. Wrong password.'})
 			} else {
-				var token = jwt.sign(user, app.get('secret'));
+				var token = jwt.sign(user, app.get('secret'), {
+					expiresIn: "1 day"
+				});
 				res.json({
 					success: true,
 					message: "Enjoy your token!",
@@ -117,7 +119,7 @@ app.use('/api', apiRoutes);
 
 // Start server
 app.listen(port);
-console.log("Server running on\nhttp://localhost:" + port)
+console.log("Server running on\nhttp://localhost:" + port);
 
 // Expose app
 module.exports = app;
