@@ -1,7 +1,9 @@
-var mongoose = require('mongoose'),
-		crypto = require('crypto'),
-		jwt = require('jsonwebtoken'),
-		env = require('node-env-file')
+var mongoose = require('mongoose');
+var crypto = require('crypto');
+var jwt = require('jsonwebtoken');
+var env = require('node-env-file');
+
+env(__dirname + './../../.env');
 
 var UserSchema = new mongoose.Schema({
 	username: {
