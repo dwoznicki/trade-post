@@ -1,0 +1,25 @@
+{
+  "name": "trade-post",
+  "version": "1.0.0",
+  "description": "Trading Site",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dwoznicki/trade-post.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dwoznicki/trade-post/issues"
+  },
+  "homepage": "https://github.com/dwoznicki/trade-post#readme",
+  "dependencies": {
+    "body-parser": "^1.15.1",
+    "express": "^4.13.4",
+    "mongoose": "^4.4.19"
+  }
+}
